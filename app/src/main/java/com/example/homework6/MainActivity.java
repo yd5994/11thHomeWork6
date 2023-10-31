@@ -20,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        /**
+         * @author: jonathan David
+         * @since:31/10/2023
+         */
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -34,16 +38,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btn1(View view) {
+        /**
+         * @param: The function adds 1 to the "Number"
+         */
         value = Number.getText().toString();
         Number.setText(String.valueOf(Integer.parseInt(value)+1));
     }
 
     public void btn2(View view) {
+        /**
+         * @param: The function reset the value in "Number"
+         */
         value = "0";
         Number.setText("0");
     }
 
     public void btn3(View view) {
+        /**
+         * @param: The function save the data and exit from the app;
+         */
         SharedPreferences settings=getSharedPreferences("PREFS_NAME",MODE_PRIVATE);
         SharedPreferences.Editor editor=settings.edit();
         value=Number.getText().toString();
